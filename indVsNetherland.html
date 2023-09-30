@@ -19,9 +19,9 @@
 </head>
 
 <body>
-    <div id="banner" class="banner">
+    <!-- <div id="banner" class="banner">
         <img src="assets/image/india-vs-australia-banner.jpg" alt="">
-    </div>
+    </div> -->
     <section class="cricket invau layout_padding">
         <div class="container">
             <div class="section_head">
@@ -29,18 +29,18 @@
             </div>
             <div class="cricket_content ">
                 <div class="cricket_content_head">
-                    <h2>INDIA vs AUSTRALIA - ICC MEN`S CWC 2023</h2>
+                    <h2>INDIA vs NETHERLANDS - ICC MEN`S CWC 2023</h2>
                 </div>
                 <div class="cricket_date row">
                     <div class="date ">
-                        <p><i class="bi bi-calendar-fill"></i> Sun 08 Oct 2023</p>
+                        <p><i class="bi bi-calendar-fill"></i> Sun 14 Oct 2023</p>
                     </div>
                     <div class="location date">
-                        <p><i class="bi bi-geo-alt-fill"></i> M.A Chidambaram Stadium</p>
+                        <p><i class="bi bi-geo-alt-fill"></i>M. Chinnaswamy Stadium</p>
                     </div>
                 </div>
                 <div class="text">
-                    <a href="https://maps.app.goo.gl/FtDAbAB8BT9CRoFo8">view on map</a>
+                    <a href="https://maps.app.goo.gl/fow7JgdoQTRjY8f9A">view on map</a>
                 </div>
             </div>
         </div>
@@ -71,96 +71,97 @@
     </section>
     <section class="seat layout_padding">
         <form method="post" id="inputGroupSelect01">
-        <div class="seat_content">
-            <div class="seat_head">
-                <h2>Choose Your Seat</h2>
-            </div>
-            <div class="seat_input">
-                <div class="stand">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">stand</label>
-                        </div>
-                        <select class="form-select custom-select" id="inputGroupSelect01" required="">
-                            <option selected="" value="">Choose...</option>
+            <div class="seat_content">
+                <div class="seat_head">
+                    <h2>Choose Your Seat</h2>
+                </div>
+                <div class="seat_input">
+                    <div class="stand">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">stand</label>
+                            </div>
+                            <select id="selectSheet" class="form-select custom-select" id="inputGroupSelect01"
+                                required="">
+                                <option selected="" value="">Choose...</option>
 
-                            <option value="1">A Upper</option>
-                            <option value="2">B Upper</option>
-                            <option value="3">C Upper</option>
-                            <option value="4">D Upper</option>
-                            <option value="5">E Upper</option>
-                            <option value="6">F Upper</option>
-                            <option value="6">G Upper</option>
-                            <option value="6">H Upper</option>
-                            <option value="6">I Upper</option>
-                            <option value="1">A Lower</option>
-                            <option value="2">B Lower</option>
-                            <option value="3">C Lower</option>
-                            <option value="4">D Lower</option>
-                            <option value="5">E Lower</option>
-                            <option value="6">F Lower</option>
-                            <option value="6">G Lower</option>
-                            <option value="6">H Lower</option>
-                            <option value="6">I Lower</option>
+                                <option value="1">A Upper</option>
+                                <option value="2">B Upper</option>
+                                <option value="3">C Upper</option>
+                                <option value="4">D Upper</option>
+                                <option value="5">E Upper</option>
+                                <option value="6">F Upper</option>
+                                <option value="6">G Upper</option>
+                                <option value="6">H Upper</option>
+                                <option value="6">I Upper</option>
+                                <option value="1">A Lower</option>
+                                <option value="2">B Lower</option>
+                                <option value="3">C Lower</option>
+                                <option value="4">D Lower</option>
+                                <option value="5">E Lower</option>
+                                <option value="6">F Lower</option>
+                                <option value="6">G Lower</option>
+                                <option value="6">H Lower</option>
+                                <option value="6">I Lower</option>
 
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="email_input">
-                <div class="stand">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">email</label>
+                            </select>
                         </div>
-                        <input type="email" placeholder="Enter Email for E~Ticket" required>
                     </div>
                 </div>
-            </div>
-            <div class="email_input">
-                <div class="stand">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">Mobile</label>
+                <div class="email_input">
+                    <div class="stand">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">email</label>
+                            </div>
+                            <input id="userEmail" type="email" placeholder="Enter Email for E~Ticket" required>
                         </div>
-                        <input type="tel" class="form-control" placeholder="Enter Mobile Number" aria-label="Username"
-                            aria-describedby="addon-wrapping" minlength="10" maxlength="10" required="">
+                    </div>
+                </div>
+                <div class="email_input">
+                    <div class="stand">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Mobile</label>
+                            </div>
+                            <input type="tel" id="mobileNumber" class="form-control" placeholder="Enter Mobile Number"
+                                aria-label="Username" aria-describedby="addon-wrapping" minlength="10" maxlength="10"
+                                required="">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="logo">
-            <!-- <a href="#"><img src="assets/image/logo.jpeg" alt=""></a> -->
-        </div>
-       
-        <div class="bottom">
-            <div class="bottom-item">
-                <span id="ticket-price" name="ticketprice">₹2000</span>
-                <div class="quantity-selector">
-                    <label for="quantity">Quantity:</label>
-                    <div class="quantity-controls">
-                        <button id="decrement" class="button">-</button>
-                        <input type="number" id="quantity" value="1" min="1">
-                        <button id="increment" class="button">+</button>
+            <div class="logo">
+                <!-- <a href="#"><img src="assets/image/logo.jpeg" alt=""></a> -->
+            </div>
+
+            <div class="bottom">
+                <div class="bottom-item">
+                    <span id="ticket-price" name="ticketprice">₹2000</span>
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantity:</label>
+                        <div class="quantity-controls">
+                            <button id="decrement" class="button">-</button>
+                            <input type="number" id="quantity" value="1" min="1">
+                            <button id="increment" class="button">+</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="bottom-item">
-                <button type="submit" id="book-now-button" class="button">Book Now</button>
-                <div style="
+                <div class="bottom-item">
+                    <button type="submit" id="book-now-button" class="button">Book Now</button>
+                    <div style="
         color: red;
         margin-top: 5px;
         ">only 9 left!</div>
+                </div>
             </div>
-        </div>
-    </form>
+        </form>
     </section>
 
-     <div class="footer">
-            <div class="bookmyshow"><img src="assets/image/bookmyshow.jpeg" alt="Footer"></div>
-            <div class="term"><img src="assets/image/footer.png" alt="Footer"></div>
-        </div>
-
+    <div class="footer">
+        <div class="bookmyshow"><img src="assets/image/bookmyshow.jpeg" alt="Footer"></div>
+        <div class="term"><img src="assets/image/footer.png" alt="Footer"></div>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -180,8 +181,15 @@
         });
 
         // Manually submit the form when the "Book Now" button is clicked
+      
+
         bookNowButton.addEventListener('click', () => {
-            seatSelectionForm.submit();
+            // Get the target page URL
+            // const targetPageURL = "./ind_vs_aus_payment.html";
+            const targetPageURL = './payment.html'
+
+            // Navigate to the target page
+            window.location.href = targetPageURL;
         });
 
     </script>

