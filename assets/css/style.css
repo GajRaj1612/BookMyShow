@@ -771,7 +771,34 @@ input[type="number"] {
 
 
 
+.ticket-img-container {
+    position: relative;
+}
 
+.ticket-img-container a{
+    width: 100%;
+}
+.ticketcon p {
+    background: black;
+    color: white;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    padding-left: 4px;
+    border-radius: 2px;
+}
+
+.matchname {
+    font-weight: 700;
+}
+
+.staduim {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: .8rem;
+    color: black;
+}
 
 
 
