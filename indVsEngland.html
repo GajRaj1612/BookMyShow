@@ -33,7 +33,7 @@
                 </div>
                 <div class="cricket_date row">
                     <div class="date ">
-                        <p><i class="bi bi-calendar-fill"></i> Sun 08 Oct 2023</p>
+                        <p><i class="bi bi-calendar-fill"></i> Sun 29 Oct 2023</p>
                     </div>
                     <div class="location date">
                         <p><i class="bi bi-geo-alt-fill"></i>BRSABV Ekana Cricket Stadium</p>
@@ -189,7 +189,7 @@
             if (inputGroupSelect01.value === '' || Email.value === '' || Phone.value === '') {
                 alert("Please fill in all fields.");
             } else {
-            const targetPageURL = './payment.html'
+            const targetPageURL = './InVsEnglandPayment.html'
 
             // Navigate to the target page
             window.location.href = targetPageURL;
@@ -205,7 +205,7 @@
             function updateTicketPrice() {
                 var quantityInput = $("#quantity");
                 var currentQuantity = parseInt(quantityInput.val());
-                var ticketPrice = "2000"; // Initial ticket price
+                var ticketPrice = "1500"; // Initial ticket price
                 var totalPrice = ticketPrice * currentQuantity;
                 $("#ticket-price").text("₹" + totalPrice);
                 localStorage.setItem("ticketPrice", totalPrice);

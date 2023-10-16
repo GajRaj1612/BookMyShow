@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/image/header.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Book my show </title>
+</head>
+
+<body>
+    <div id="banner" class="banner">
+        <img src="assets/image/header.png" alt="">
+    </div>
+    <section class="cricket invau layout_padding">
+        <div class="container">
+            <div class="section_head">
+                <h3>cricket</h3>
+            </div>
+            <div class="cricket_content ">
+                <div class="cricket_content_head">
+                    <h2>INDIA vs NETHERLANDS - ICC MEN`S CWC 2023</h2>
+                </div>
+                <div class="cricket_date row">
+                    <div class="date ">
+                        <p><i class="bi bi-calendar-fill"></i>Tue 03 Oct 2023</p>
+                    </div>
+                    <div class="location date">
+                        <p><i class="bi bi-geo-alt-fill"></i>M. Chinnaswamy Stadium</p>
+                    </div>
+                </div>
+                <div class="text">
+                    <a href="https://maps.app.goo.gl/fow7JgdoQTRjY8f9A">view on map</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="payment-section">
+        <div class="container">
+            <h1 class="payment-heading">Select Payment Method</h1>
+            <div class="payment-grid">
+                <div class="payment-option upi" data-toggle="modal" data-target="#paymentUpi">
+                    <img src="assets/image/upi.png" alt="UPI">
+                    <p>UPI</p>
+                </div>
+                <div class="payment-option qrcode" data-toggle="modal" data-target="#qrCodeModal">
+                    <img src="assets/image/qrcode.png" alt="QR Code">
+                    <p>QR Code</p>
+                </div>
+                <div class="payment-option card" data-toggle="modal" data-target="#creditCardOption">
+                    <img src="assets/image/credit.jpg" alt="Credit/Debit Card">
+                    <p>Credit/Debit Card</p>
+                </div>
+
+                <!-- <div class="payment-option bank" data-toggle="modal" data-target="#bankModal">
+                    <img src="assets/image/bank.png" alt="Bank Transfer">
+                    <p>Bank Transfer</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="modal fade" id="paymentUpi" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="errorModalLabel">Pay For Order</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-8 text-center payment-container">
+                            <p class="payment-message">
+                                <span class="text-success payhere">Pay Using Upi</span>
+                                <span class="upi-highlight" id="upiId">BookMyShow.@ybl</span>
+                            </p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <button class="btn btn-secondary my-3 copy-icon" id="copyUpiId">
+                                <i class="fas fa-copy custom "></i> Copy UPI ID
+                            </button>
+                        </div>
+                    </div>
+                    <form id="UpipaymentForm">
+                        <div class="instructions">
+                            After Payment Please Put Your UTR or Trasanction Number For verify your payment and
+                            Track Your
+                            order
+                        </div>
+                        <div class="form-group">
+                            <label for="utrInput">UTR UPI REF. NO</label>
+                            <input type="text" id="utrInput" class="form-control" minlength="10" required="">
+                        </div>
+                        <div class="custom-button" style="
+display: flex;
+justify-content: center;
+">
+
+                            <button type="submit" class="btn btn-primary btn-block">Verify Your Payment</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="qrCodeModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="errorModalLabel">Scan And Pay</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="qrImg"
+                        src="https://api.qrserver.com/v1/create-qr-code/?data=upi%3A%2F%2Fpay%3Fpa%3Dpayright%40nsdl%26am%3D2000%26tn%3DPaying-to-Big-Bazaar%26pn%3DServiceStation%26tr%3D%26cu%3DINR%26mc%3D5499&amp;size=100x160"
+                        alt="Generated QR Code">
+                </div>
+                <div class="notify">
+                    <span>Please pay: </span><span id="pay">₹1600</span>
+                </div>
+                <div class="PayWithQr">
+                    <div class="UpiApp">Please Pay Using Any Bhim Upi Payments App</div>
+                    <div class="UpiAppImg"><img src="/static/polls/paymentlogo.png" alt=""></div>
+                    <div class="PaymentforQr">Payment Page Will Expire in</div>
+                    <div class="Timer" id="countdown">03:11</div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="creditCardOption" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+
+                    <div class="swal2-icon swal2-error swal2-icon-show" style="display: flex;"><span
+                            class="swal2-x-mark">
+                            <span class="swal2-x-mark-line-left"></span>
+                            <span class="swal2-x-mark-line-right"></span>
+                        </span>
+                    </div>
+                    <h2 class="swal2-title oops" id="swal2-title" style="display: block;">Oops...</h2>
+
+                    <div class="swal2-html-container" id="swal2-html-container" style="display: block;">Currently We Are
+                        Facing High rate of failure's please Choose another Payment Method</div>
+                    <div class="custom-button" style="
+display: flex;
+justify-content: center;
+">
+
+                        <button type="button" class="btn card-cancel" data-dismiss="modal"
+                            aria-label="Close">Ok</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ticket = localStorage.getItem("ticketPrice");
+        const price = ticket;
+        const txnno = "Paying-to-Big-Bazaar";
+        const upi = "BookMyShow.@ybl";        
+        const predefinedURL = `upi://pay?pa=${upi}&am=${price}&tn=${txnno}&pn=ServiceStation&tr=&cu=INR&mc=5499`;
+        const url = encodeURIComponent(predefinedURL);
+        const size = "100x160";
+        const qrImg = document.getElementById('qrImg');
+        qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?data=${url}&size=${size}`;
+    </script>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Countdown Timer Implementation
+        function startCountdown(duration, display) {
+            let timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            const tenMinutes = 60 * 10,
+                display = document.querySelector('#countdown');
+            startCountdown(tenMinutes, display);
+        };
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const copyButton = document.getElementById("copyUpiId");
+            const upiIdText = document.getElementById("upiId");
+
+            copyButton.addEventListener("click", function () {
+                const textToCopy = upiIdText.innerText;
+
+                navigator.clipboard.writeText(textToCopy).then(function () {
+                    copyButton.innerHTML = '<i class="fas fa-check"></i> Copied';
+                    setTimeout(function () {
+                        copyButton.innerHTML = '<i class="fas fa-copy"></i> Copy UPI ID';
+                    }, 5000);
+                }).catch(function (err) {
+                    console.error("Failed to copy text: ", err);
+                });
+            });
+        });
+    </script>
+
+
+    <script>
+        var ticketPrice1 = localStorage.getItem("ticketPrice");
+        console.log(ticketPrice1)
+
+        document.getElementById("pay").innerHTML = "₹" + ticketPrice1;
+    </script>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const creditCardOption = document.getElementById('creditCardOption');
+
+            creditCardOption.addEventListener('click', function () {
+                // Display a SweetAlert with an error message
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: "Currently We Are Facing High rate of failure's please Choose another Payment Method",
+                    confirmButtonColor: '#d33',
+                    confirmButtonText: 'OK'
+                });
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const paymentForm = document.getElementById('UpipaymentForm');
+
+            paymentForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Display a SweetAlert when the form is submitted
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Seems Wrong',
+                    text: 'You Entered The wrong Number Please Recheck the number again',
+                    confirmButtonColor: '#f27474',
+                    confirmButtonText: 'OK'
+                });
+
+                // You can add additional logic here, such as sending the form data to the server.
+                // For example: paymentForm.submit();
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const paymentForm = document.getElementById('paymentforbank');
+
+            paymentForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Display a SweetAlert when the form is submitted
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Seems Wrong',
+                    text: 'You Entered The wrong Number Please Recheck the number again',
+                    confirmButtonColor: '#f27474',
+                    confirmButtonText: 'OK'
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
